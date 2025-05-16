@@ -33,4 +33,6 @@ urlpatterns = [
     #Users endpint
     path('auth/', include('users.urls')),
 
+    #cart endpoint
+    path('carts/', include('carts.urls'))
 ]

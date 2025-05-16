@@ -101,7 +101,6 @@ def creating_product(request):
 
 
 @api_view(['PATCH'])
-# @permission_classes(['IsAuthenticated'])
 @permission_classes([IsAuthenticated])
 def update_product(request, id):
     try:
@@ -117,7 +116,6 @@ def update_product(request, id):
 
 
 @api_view(['PUT'])
-# @permission_classes(['IsAuthenticated'])
 @permission_classes([IsAuthenticated])
 def update_product_full(request, id):
     try:
@@ -133,7 +131,6 @@ def update_product_full(request, id):
 
 
 @api_view(['DELETE'])
-# @permission_classes(['IsAuthenticated'])
 @permission_classes([IsAuthenticated])
 def delete_product(request, id):
     try:
@@ -154,7 +151,6 @@ def get_all_category(request):
     return Response(serializer.data, status=status.HTTP_200_OK)
 
 @api_view(['POST'])
-# @permission_classes(['IsAuthenticated'])
 @permission_classes([IsAuthenticated])
 def create_category(request):
     serializer = CategorySerializer(data = request.data)
@@ -165,7 +161,6 @@ def create_category(request):
 
 
 @api_view(['DELETE'])
-# @permission_classes(['IsAuthenticated'])
 @permission_classes([IsAuthenticated])
 def delete_category(request, id ):
     try:
